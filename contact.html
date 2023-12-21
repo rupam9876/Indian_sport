@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Modern glowing button hover effect</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  left: 100px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background:transparent;
+}
+
+.box{
+  background-image: url(desktop-wallpaper.jpg);
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+}
+
+a {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0.75rem 1.5rem;
+  transition: 0.5s;
+}
+
+a:hover {
+  letter-spacing: 0.25rem;
+  background: var(--color);
+  color: var(--color);
+  box-shadow: 0 0 35px var(--color);
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+a span {
+  position: relative;
+  z-index: 1;
+}
+
+a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+a i::before {
+  content: '';
+  position: absolute;
+  top: -3.5px;
+  left: 80%;
+  width: 10px;
+  height: 5px;
+  border: 2px solid var(--color);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+a:hover i::before {
+  left: 20%;
+  width: 20px;
+}
+
+a i::after {
+  content: '';
+  position: absolute;
+  bottom: -3.5px;
+  left: 20%;
+  width: 10px;
+  height: 5px;
+  border: 2px solid var(--color);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+a:hover i::after {
+  left: 80%;
+  width: 20px;
+}
+
+.input{
+  color: white;
+}
+.from{
+  background-color:rgba(18, 18, 29, 0.551);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 30px;
+  left: 10px;
+  height: 270px;
+  width: 320px;
+  border-radius: 7px;
+}
+
+.from h1{
+  color: beige;
+  position: relative;
+  left: 9px;
+}
+
+.input{
+  color: #090909;
+  position: relative;
+  left: 9px;
+  background-color: rgba(86, 101, 116, 0.616);
+  border-radius: 8px;
+  border: solid rgb(91, 34, 59);
+  font-size: 23px;
+  line-height: 1cm;
+}
+
+.from table{
+  position: relative;
+  left: 1cm;
+}
+
+.paragraph{
+  width: 70%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: relative;
+  left: 350px;
+  bottom: 400px;
+  color: white;
+}
+
+.paragraph p{
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgba(195, 199, 214, 0.884);
+  margin: 1px black;
+}
+
+</style>
+<body>
+  <div class="box">
+    <div class="from">
+      <h1>CONTACT US</h1>
+      <table left="25">
+        <tr><input placeholder="Name" class="input"></tr><br>
+        <tr><input class="input" placeholder="Email" type="email"></tr><br>
+        <input class="input" placeholder="Tell Me your Problem" type="text"></tr><br>
+        <input class="input" type="Submit"><br>
+        <input class="input" type="reset">
+      </table>
+    </div>
+  </div><div class="paragraph">
+    <p>Contact Us
+
+      We value your feedback, questions, and inquiries. Our dedicated team is here to assist you. Whether you have a product-related query, need assistance with an order, or simply want to share your thoughts with us, we welcome your communication. Feel free to reach out via the contact form below, and we'll get back to you as soon as possible.
+      For urgent matters or immediate assistance, please call us at [0000000000].
+      
+      Thank you for choosing our website. Your satisfaction is our priority, and we look forward to serving you.
+      
+      Please replace the placeholders in square brackets with your specific contact information. This paragraph can be customized to suit the needs of your organization.</p>
+  </div>
+
+</body>
+</html>
